@@ -192,3 +192,6 @@ def binary_search(element, some_list, start_index=0, end_index=None):
     # 찾는 항목이 중간 값보다 크면 리스트 오른쪽을 탐색
     else:
         return binary_search(element, some_list, mid + 1, end_index)  
+
+
+#################################################
