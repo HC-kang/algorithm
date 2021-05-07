@@ -71,7 +71,7 @@ solution(12,8)
 # 똑똑한 로봇 청소기
 ###
 
-N = 12  # 총 이동횟수
+N = 2  # 총 이동횟수
 
 def move(log):  # log = [[0, 0]]
     # 맨 처음 위치 포함, 13개 지나가면 종료
@@ -93,3 +93,6 @@ def move(log):  # log = [[0, 0]]
     return cnt
 
 print(move([[0, 0]]))
+
+import tqdm
+tqdm.
