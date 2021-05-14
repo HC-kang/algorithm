@@ -23,3 +23,9 @@ def quick_sort_sub(a, start,end):
             a[i], a[j] = a[j], a[i]
             i += 1
     a[i], a[end] = a[end], a[i]
+
+
+listk = [1,2,3,4,5]
+sorted(listk, reverse = True)
+listk.sort(reverse = True)
+listk
