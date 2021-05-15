@@ -23,11 +23,13 @@ def quick_sort(a):
     if n <= 1:
         return a
     pivot = a[-1]
-    g1 = []
+    g1, g2 = [], []
     for i in range(0, n-1):
         if a[i] < pivot:
-            g1.append(a[i])
-    return quick_sort(g1)[0]
+            g1.append(a[i]) 
+        else:
+            g2.append(a[i])
+    return quick_sort(g1) + [pivot] + quick_sort(g2)
 
 
 
@@ -59,3 +61,38 @@ def quick_sort(a):
         if a[i] < pivot:
             g1.append(a[i])
     return quick_sort(g1)[0]
+
+d = [4,3,5,6,7,8,2,3,4,5,3,1,2,2]
+a = (d.remove(4))
+d
+a
+
+################
+
+def quick_sort(a):
+    n = len(a)
+    if n <= 1:
+        return a
+    pivot = a[-1]
+    g1 = []
+    g2 = []
+    for i in range(0, n-1):
+        if a[i] < pivot:
+            g1.append(a[i])
+        else:
+            g2.append(a[i]) 
+    return quick_sort(g1) + [pivot] + quick_sort(g2)
+    
+def solution(arr):
+    answer = arr
+    if len(arr) <= 1:
+        return [-1]
+    else:
+        answer.remove(quick_sort(arr)[0])
+    return answer
+
+solution([4,3,2,1])
+quick_sort([4,3,2,1])
+
+a = [4,3,2,1]
+quick_sort(a)
