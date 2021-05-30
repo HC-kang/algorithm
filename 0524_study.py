@@ -38,3 +38,17 @@ d = [11,2,4,5,1,3,9,8,7,6,10]
 bubble_sort(d)
 print(d)
 
+#############
+
+a, b = map(int, input().split())
+print(a,b)
+
+a, b = map(int, input().split())
+
+print(a<b)
+
+a = int(input())
+print(not bool(a))
+
+ a = 100
+ ~a
