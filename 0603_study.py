@@ -186,3 +186,86 @@ def solution1(new_id):
     return st
 
 solution1(new_id)
+
+########################
+
+def preprocess(n, arr):
+    _arr = []
+    for i in arr:
+        line = bin(i)[2:]
+        while len(line)<n:
+            line = '0' + line
+        for j in line:
+            _arr.append(j)
+    return _arr
+
+def solution(n, arr1, arr2):
+    _arr1 = preprocess(n, arr1)
+    _arr2 = preprocess(n, arr2)
+    temp = ['#' if int(a)+int(b)  else ' ' for a, b in zip(_arr1, _arr2)]
+    answer = []
+    for i in range(0, n**2, n):
+        print(i)
+        answer.append(''.join(temp[i:i+n]))
+    return answer
+
+solution(5, [9, 20, 28, 18, 11],[30, 1, 21, 17, 28])
+
+solution(6, [46, 33, 33 ,22, 31, 50], [27 ,56, 19, 14, 14, 10])
+
+values = (1, 42, 1004, 'abc', 'hello')
+for value in values:
+    print( str(value).rjust(6) )
+
+################################
+
+def solution(nums):
+    answer = 0
+    for i in range(len(nums)-2):
+        for j in range(i+1, len(nums)-1):
+            for k in range(j+1, len(nums)):
+                num = nums[i]+nums[j]+nums[k]
+                cnt = 0
+                for l in range(2, int(num**(0.5)+1)):
+                    if num%l==0:
+                        cnt+=1
+                if cnt==0:
+                    answer+=1
+    return answer
+
+solution([1,2,7,6,4])
+solution([1,2,3,4])
+
+
+
+
+a = [1,2,3,4,5,0]
+for i in a:
+    print(10/i)
+else:
+    print('hi')
+
+
+import random
+
+lucky_num = random.randint(1, 100)
+print(f"lucky_num is {lucky_num}")
+for i in range(10):
+    num = random.randint(1, 100)
+    if num == lucky_num:
+        print(f"Success")
+        break
+    if i == 9:
+        print("Fail")
+
+import random
+
+lucky_num = random.randint(1, 100)
+print(f"lucky_num is {lucky_num}")
+for _ in range(10):
+    num = random.randint(1, 100)
+    if num == lucky_num:
+        print(f"Success")
+        break
+else:
+    print("Fail")
