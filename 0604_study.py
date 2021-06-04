@@ -189,3 +189,16 @@ def solution(N, stages):
     answer = sorted(fail, key=fail.get, reverse=True)
     return answer
 
+
+
+def solution(phone_number):
+    return ''.join(['*' for i in phone_number[:-4]] + list(phone_number[-4:]))
+
+solution("01033334444")
+
+
+def solution(x):
+    num = sum(map(int, list(str(x))))
+    return 'true' if x%num==0 else 'false'
+
+solution(13)
