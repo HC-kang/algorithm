@@ -30,3 +30,56 @@ b = {3,4,5}
 a
 b
 a | b
+
+
+import sys
+
+data = sys.stdin.readline().strip()
+print(data)
+a = '0010'
+print(f'print({a})')
+
+
+pow(2, 5)
+
+
+from sympy import Limit, S, Symbol
+x = Symbol('x')
+
+Limit(1/x, x, S.Infinity).doit()
+
+Limit(1/x, x, S.Infinity, dir = '-').doit()
+
+arr = [1,2,3]
+answer = [arr[0]]
+answer
+
+b = (1,2,3)
+b
+
+###########
+n, k = map(int, input().split())
+cnt = 0
+while n != 1:
+    if n % k == 0:
+        n //= k
+        cnt+=1
+    else:
+        n-=1
+        cnt+=1
+print(cnt)
+
+###############
+
+S = list(input())
+result = 1
+if S[0]!='1':
+    result = 1
+elif S[0]=='1':
+    result = 0
+for i in S:
+    if int(i)==0 or int(i)==1:
+        result += int(i)
+    else:
+        result *= int(i)
+print(result)
