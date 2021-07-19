@@ -56,7 +56,7 @@ class ChainedHash:
 
         while p is not None:
             if p.key == key:            # key를 발견하면 아래를 실행
-                if p is None:
+                if pp is None:
                     self.table[hash] = p.next
                 else:
                     pp.next = p.next
