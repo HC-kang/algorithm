@@ -63,6 +63,29 @@ for i in range(len(answer)):
 
 
 ############################
+# 강사님 풀이
+
+
+import sys 
+sys.stdin = open('./sample_input.txt', 'r')
+
+TC = int(input())
+for tc in range(1, TC+1):
+    N = int(input())
+    datalist= list(map(int, input().split())
+    min_val =9999999
+    max_val = 0
+    for n in datalist
+        if min > n
+            min = N
+        if max < n:
+            max_val = n
+    
+    print('#%d %d'%(tc, 1)
+
+
+############################
+
 
 '''
 3
@@ -95,6 +118,17 @@ listB
 for i in range(len(listA)):
     print('#'+str(i+1),end=' ')
     print(1 if (listA[i] in listB[i]) else 0)
+
+##################################################
+
+for tc in range(1, TC+1):
+    str1 = input()
+    str2 = input()
+
+    if str1 in str2:
+        print('#%d %d'%(tc, 1))
+    else:
+        print('#%d %d'%(tc, 0))
 
 ##################################################
 
@@ -217,3 +251,37 @@ for i in range(len(listA)):
 #8 968
 #9 209
 #10 1242
+
+
+10
+5 2
+1 3 3 6 7
+8 13 9 12 8
+4 16 11 12 6
+2 4 1 23 2
+9 13 4 7 3
+
+import sys 
+sys.stdin = open('./sample_input.txt', 'r')
+
+import pandas as pd
+
+T = int(input())
+for t in range(T):
+    N, M = map(int, input().split())
+    # N개 행렬 만들기
+    mapping = []
+    for n in range(N):
+        temp=list(map(int, input().split()))
+        mapping.append(temp)
+
+df = pd.DataFrame(mapping)
+
+temp = []
+for x in range(N-M+1):
+    for y in range(N-M+1):
+        smallmap = df.iloc[y:y+M, x:x+M]
+        # print(x, y, smallmap.sum().sum())
+        temp.append(smallmap.sum().sum())
+
+print(max(temp))
