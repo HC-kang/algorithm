@@ -22,13 +22,7 @@ for t in range(1, T+1):
 
     for i in range(N//2):
         answer += sum(MAP[i][(N//2)-i:(N//2)+1+i])
-        # print(sum(MAP[i][(N//2)-i:(N//2)+1+i]))
         answer += sum(MAP[(N-1)-i][(N//2)-i:(N//2)+1+i])
-        # print(sum(MAP[(N-1)-i][(N//2)-i:(N//2)+1+i]))
     answer += sum(MAP[N//2])
-    # print(sum(MAP[N//2]))
-    # print('T:', T)
-    # print('N:', N)
-    # print('MAP:', MAP)
 
     print('#%d %d'%(t, answer))
