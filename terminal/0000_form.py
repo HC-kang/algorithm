@@ -5,7 +5,7 @@ sys.stdin = open('/Users/heechankang/projects/pythonworkspace/git_study/algorith
 T = 10
 for t in range(1, T+1):
     N = int(input())
-    MAP = [list(map(int, input().split())) for  _ in range(N)]
+    # MAP = [list(map(int, input().split())) for  _ in range(N)]
     answer = 0
 
 
